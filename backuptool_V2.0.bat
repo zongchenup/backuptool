@@ -29,7 +29,7 @@ setlocal enabledelayedexpansion
 
 set ymd=%date:~,4%%date:~5,2%%date:~8,2%
 rem 修改拷贝日期，放开注释，切记执行完改回
-set ymd=20200703
+REM set ymd=20200703
 
 
 
@@ -465,9 +465,5 @@ if exist "%md5File%" (
         )
     )
 )
-goto eof
-:copybnrfilegetmd5
-copy /V /Y /Z !bnrFileDir!\!bnrFileName! !savePath! >nul
-call :getlocalfilemd5 "!savePath!\!bnrFileName!"
 goto eof
 :eof
